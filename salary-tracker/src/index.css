@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+
+:root {
+  --ink: #0b1220;
+  --muted: #4c6278;
+  --line: #d5e6f5;
+  --card: #ffffff;
+  --paper: #e7f3fc;
+  --income: #0284c7;
+  --expense: #1d4ed8;
+  --glow-a: #bae6fd;
+  --glow-b: #93c5fd;
+  --glow-c: #0b1220;
+  --page: #f4f9fd;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --ink: #e7f3fc;
+  --muted: #93b4ce;
+  --line: #1c3348;
+  --card: #0e1622;
+  --paper: #0a121c;
+  --income: #38bdf8;
+  --expense: #60a5fa;
+  --glow-a: #0c4a6e;
+  --glow-b: #1e3a8a;
+  --glow-c: #020617;
+  --page: #05080d;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: 'Manrope', sans-serif;
+  --font-display: 'Fraunces', serif;
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-income: var(--income);
+  --color-expense: var(--expense);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(520px 320px at 0% 0%, var(--glow-a) 0%, transparent 70%),
+    radial-gradient(480px 300px at 100% 8%, var(--glow-b) 0%, transparent 68%),
+    radial-gradient(420px 280px at 80% 100%, var(--glow-c) 0%, transparent 62%),
+    var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 10px 24px rgb(14 165 233 / 0.28);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.title-gradient {
+  background: linear-gradient(100deg, #0369a1 0%, #0ea5e9 42%, #0b1220 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme='dark'] .title-gradient {
+  background: linear-gradient(100deg, #7dd3fc 0%, #38bdf8 48%, #e0f2fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card-income {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  color: white;
+}
+
+.card-expense {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.card-balance {
+  background: #0b1220;
+  color: #e0f2fe;
+}
+
+[data-theme='dark'] .card-balance {
+  background: linear-gradient(135deg, #020617, #075985);
+  color: #e0f2fe;
+}
+
+.panel-bars {
+  background: linear-gradient(160deg, var(--card), color-mix(in srgb, #38bdf8 16%, var(--card)));
+  border: 1px solid color-mix(in srgb, #38bdf8 35%, var(--line));
+}
+
+.panel-pie {
+  background: linear-gradient(160deg, var(--card), color-mix(in srgb, #1d4ed8 14%, var(--card)));
+  border: 1px solid color-mix(in srgb, #1d4ed8 32%, var(--line));
+}
+
+.row-income {
+  background: color-mix(in srgb, var(--income) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--income) 32%, var(--line));
+}
+
+.row-expense {
+  background: color-mix(in srgb, var(--expense) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--expense) 32%, var(--line));
+}
+
+.pill-income {
+  background: #0284c7;
+  color: white;
+}
+
+.pill-expense {
+  background: #1d4ed8;
+  color: white;
+}
+
+.tab-active {
+  background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+  color: white;
+  box-shadow: 0 6px 16px rgb(14 165 233 / 0.3);
+}

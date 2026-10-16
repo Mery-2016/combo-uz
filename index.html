@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COMBO.UZ — жалюзи и рулонные шторы для дома и бизнеса. Стиль, комфорт и индивидуальные решения. Тел: +998 95 142 33 13, +998 95 199 33 13. Адрес: г. Ташкент, ул. Сагбан, 37/1">
+    <title>COMBO.UZ — Жалюзи и рулонные шторы для вашего интерьера</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- ========== ШАПКА ========== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="#home" class="logo" aria-label="COMBO.UZ — на главную">
+                <span class="logo-mark">C</span>
+                <span class="logo-text">COMBO<em>.UZ</em></span>
+            </a>
+
+            <nav class="nav" id="mainNav" aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    <li><a href="#catalog" class="nav-link">Каталог</a></li>
+                    <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                    <li><a href="#about" class="nav-link">О компании</a></li>
+                    <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+998951423313" class="header-phone" aria-label="Позвонить по номеру +998 95 142 33 13">
+                    +998 95 142 33 13
+                </a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему оформления" title="Переключить тему">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== ГЛАВНАЯ (HERO) ========== -->
+        <section class="hero" id="home">
+            <div class="hero-bg" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80"
+                     alt=""
+                     onerror="this.onerror=null;this.src='https://picsum.photos/seed/combo-hero/1920/1080';">
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <p class="hero-eyebrow">Жалюзи • Рулонные шторы • Интерьерные решения</p>
+                <h1 class="hero-title">Жалюзи и рулонные шторы для вашего интерьера</h1>
+                <p class="hero-subtitle">Стиль, комфорт и индивидуальные решения для дома и бизнеса</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+                    <a href="#contacts" class="btn btn-outline">Оставить заявку</a>
+                </div>
+
+                <ul class="hero-features">
+                    <li>Большой выбор тканей</li>
+                    <li>Изготовление по размерам</li>
+                    <li>Решения для дома и бизнеса</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== КАТАЛОГ ПРОДУКЦИИ ========== -->
+        <section class="section" id="catalog">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Каталог</p>
+                    <h2 class="section-title">Каталог продукции</h2>
+                    <p class="section-desc">Ознакомьтесь с основными категориями. Нажмите «Подробнее», чтобы узнать детали и оставить заявку.</p>
+                </header>
+
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Карточки генерируются через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ПОРТФОЛИО ========== -->
+        <section class="section section-alt" id="portfolio">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Работы</p>
+                    <h2 class="section-title">Портфолио</h2>
+                    <p class="section-desc">
+                        Примеры оформления интерьеров жалюзи и рулонными шторами.
+                        <span class="note-badge">Демонстрационные изображения — не подтверждённые проекты компании.</span>
+                    </p>
+                </header>
+
+                <div class="filters" id="portfolioFilters" role="tablist" aria-label="Фильтр портфолио">
+                    <button class="filter-btn is-active" data-filter="all" type="button">Все</button>
+                    <button class="filter-btn" data-filter="apartment" type="button">Квартиры</button>
+                    <button class="filter-btn" data-filter="house" type="button">Частные дома</button>
+                    <button class="filter-btn" data-filter="office" type="button">Офисы</button>
+                    <button class="filter-btn" data-filter="cafe" type="button">Кафе и рестораны</button>
+                </div>
+
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Карточки генерируются через JavaScript -->
+                </div>
+
+                <p class="empty-state" id="portfolioEmpty" hidden>В этой категории пока нет работ.</p>
+            </div>
+        </section>
+
+        <!-- ========== О КОМПАНИИ ========== -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <p class="section-eyebrow">О компании</p>
+                    <h2 class="section-title">Почему выбирают COMBO.UZ</h2>
+                    <p class="about-lead">
+                        Мы помогаем подобрать жалюзи и рулонные шторы, которые подходят именно вашему интерьеру —
+                        по стилю, свету и функциональности.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>
+                            <span class="about-icon">🎨</span>
+                            <div>
+                                <h3>Большой выбор тканей</h3>
+                                <p>Разные фактуры, плотности и оттенки — от лёгких светлых до плотных Blackout.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="about-icon">🧭</span>
+                            <div>
+                                <h3>Индивидуальный подбор решений</h3>
+                                <p>Поможем подобрать вариант под ваши задачи, окна и общий стиль помещения.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="about-icon">📐</span>
+                            <div>
+                                <h3>Изготовление по размерам</h3>
+                                <p>Продукция изготавливается по индивидуальным размерам вашего окна или проёма.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="about-icon">💬</span>
+                            <div>
+                                <h3>Консультации по выбору</h3>
+                                <p>Помогаем определиться с типом, тканью и цветом — без навязывания.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="about-icon">🏠</span>
+                            <div>
+                                <h3>Решения для дома и бизнеса</h3>
+                                <p>Работаем с квартирами, частными домами, офисами и заведениями.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-visual">
+                    <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=900&q=80"
+                         alt="Интерьер с рулонными шторами на окнах"
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='https://picsum.photos/seed/combo-about/900/1200';">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ОТЗЫВЫ ========== -->
+        <section class="section section-alt" id="reviews">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Отзывы</p>
+                    <h2 class="section-title">Что говорят о нас</h2>
+                    <p class="section-desc">
+                        <span class="note-badge">Демонстрационные отзывы — вымышленные и не являются реальными откликами клиентов.</span>
+                    </p>
+                </header>
+
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <p class="review-text">«Помогли подобрать шторы день-ночь в гостиную — довольна результатом, смотрится аккуратно и стильно.»</p>
+                        <footer class="review-meta">
+                            <strong>Азиза Р.</strong>
+                            <span>Демонстрационный отзыв</span>
+                        </footer>
+                    </article>
+                    <article class="review-card">
+                        <p class="review-text">«Заказывали жалюзи в офис. Понравился подход: всё объяснили, предложили несколько вариантов по бюджету.»</p>
+                        <footer class="review-meta">
+                            <strong>Тимур К.</strong>
+                            <span>Демонстрационный отзыв</span>
+                        </footer>
+                    </article>
+                    <article class="review-card">
+                        <p class="review-text">«Понравилось, что изготовили по нашим размерам и учли особенности окон. Спасибо за консультацию!»</p>
+                        <footer class="review-meta">
+                            <strong>Дильноза М.</strong>
+                            <span>Демонстрационный отзыв</span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== КОНТАКТЫ И ЗАЯВКА ========== -->
+        <section class="section" id="contacts">
+            <div class="container contacts-grid">
+                <div class="contacts-info">
+                    <p class="section-eyebrow">Контакты</p>
+                    <h2 class="section-title">Оставьте заявку</h2>
+                    <p class="section-desc">
+                        Заполните форму — мы подскажем варианты и поможем подобрать подходящее решение.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Телефон 1</span>
+                            <a href="tel:+998951423313">+998 95 142 33 13</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Телефон 2</span>
+                            <a href="tel:+998951993313">+998 95 199 33 13</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">WhatsApp / Telegram</span>
+                            <a href="https://wa.me/998951423313" target="_blank" rel="noopener">+998 95 142 33 13</a><br>
+                            <a href="https://wa.me/998951993313" target="_blank" rel="noopener">+998 95 199 33 13</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@combo.uz">info@combo.uz</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Адрес</span>
+                            <span>г. Ташкент, ул. Сагбан, 37/1</span>
+                        </li>
+                    </ul>
+
+                    <!-- ПАНЕЛЬ СОХРАНЁННЫХ ЗАЯВОК -->
+                    <div class="saved-panel" id="savedPanel">
+                        <div class="saved-head">
+                            <h3>Сохранённые заявки</h3>
+                            <button type="button" class="btn btn-ghost btn-small" id="clearAllBtn" title="Очистить все заявки">Очистить все</button>
+                        </div>
+                        <p class="saved-note">
+                            Заявки сохраняются только в этом браузере и на этом устройстве (localStorage).
+                            Это демонстрационная система, а не общая база данных компании.
+                        </p>
+                        <ul class="saved-list" id="savedList"></ul>
+                        <p class="empty-state" id="savedEmpty">Сохранённых заявок пока нет.</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <label for="fieldName">Имя <span class="req">*</span></label>
+                        <input type="text" id="fieldName" name="name" placeholder="Ваше имя" autocomplete="name" required>
+                        <p class="field-error" data-error-for="fieldName"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="fieldPhone">Номер телефона <span class="req">*</span></label>
+                        <input type="tel" id="fieldPhone" name="phone" placeholder="+998 95 142 33 13" autocomplete="tel" required>
+                        <p class="field-error" data-error-for="fieldPhone"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="fieldProduct">Интересующий вид продукции</label>
+                        <select id="fieldProduct" name="product">
+                            <option value="">— Выберите категорию —</option>
+                            <option value="Рулонные шторы">Рулонные шторы</option>
+                            <option value="День-Ночь">День-Ночь</option>
+                            <option value="Blackout">Blackout</option>
+                            <option value="Plissé">Plissé</option>
+                            <option value="Honeycomb">Honeycomb</option>
+                            <option value="Вертикальные жалюзи">Вертикальные жалюзи</option>
+                            <option value="Double">Double</option>
+                            <option value="Жалюзи с фотопечатью">Жалюзи с фотопечатью</option>
+                            <option value="Другое">Другое / нужна консультация</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="fieldComment">Комментарий</label>
+                        <textarea id="fieldComment" name="comment" rows="4" placeholder="Опишите задачу, размеры окон, пожелания..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+                    <p class="form-note">
+                        Нажимая «Отправить заявку», вы сохраняете заявку локально в этом браузере.
+                        Реальная отправка на сервер в демо-версии не выполняется.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== ПОДВАЛ ========== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">C</span>
+                <span class="logo-text">COMBO<em>.UZ</em></span>
+            </div>
+            <p class="footer-copy">
+                © <span id="year"></span> COMBO.UZ. Демонстрационный учебный проект.<br>
+                Телефоны: <a href="tel:+998951423313">+998 95 142 33 13</a>, <a href="tel:+998951993313">+998 95 199 33 13</a><br>
+                Адрес: г. Ташкент, ул. Сагбан, 37/1
+            </p>
+            <nav class="footer-nav" aria-label="Навигация в подвале">
+                <a href="#catalog">Каталог</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- ========== МОДАЛЬНОЕ ОКНО ТОВАРА ========== -->
+    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content" role="document">
+            <button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>&times;</button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-text" id="modalText"></p>
+                <ul class="modal-features" id="modalFeatures"></ul>
+                <button type="button" class="btn btn-primary" id="modalRequestBtn">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ЛАЙТБОКС ПОРТФОЛИО ========== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+        <button class="lightbox-close" type="button" aria-label="Закрыть" data-close-lightbox>&times;</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Предыдущее изображение" id="lightboxPrev">&#10094;</button>
+        <img id="lightboxImage" src="" alt="Просмотр работы">
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Следующее изображение" id="lightboxNext">&#10095;</button>
+    </div>
+
+    <!-- ========== КОНТЕЙНЕР УВЕДОМЛЕНИЙ ========== -->
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+</html>
